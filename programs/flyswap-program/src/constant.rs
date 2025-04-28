@@ -1,3 +1,3 @@
 use anchor_lang::prelude::*;
 
-pub const ANCHOR_DISCRIMINATOR: U8 = 8;
+pub const ANCHOR_DISCRIMINATOR: usize = 8;
