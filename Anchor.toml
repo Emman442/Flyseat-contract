@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-flyswap_program = "77rK3AyovcpMkukLEUfwDp59wfRXkzXomNQGCNmscWeJ"
+flyswap_program = "EkwZGxeTUfUhHhVATjXt48yus7RQM7qPayBAyGVHJk9d"
 [registry]
 url = "https://api.apr.dev"
 

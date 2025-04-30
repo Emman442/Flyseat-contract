@@ -14,4 +14,18 @@ pub enum ErrorCode {
     InvalidAuthority,
     #[msg("The provided amount is invalid.")]
     InvalidAmount,
+    #[msg("This seat is already booked.")]
+    SeatAlreadyBooked,
+    #[msg("The seat is already checked in.")]
+    AlreadyCheckedIn,
+    #[msg("The check-in window is closed.")]
+    CheckInWindowClosed,
+    #[msg("The provided collection is invalid.")]
+    InvalidCollection,
+    #[msg("This Authority is not the owner of the seat.")]
+    UnauthorizedRedemption,
+   
+  
+    
+
 }

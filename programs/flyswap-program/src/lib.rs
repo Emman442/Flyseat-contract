@@ -4,19 +4,23 @@ pub mod constant;
 pub mod error;
 pub mod mint;
 pub mod states;
+pub mod buySeat;
+pub mod redeem;
 
 pub use constant::*;
 pub use error::*;
 pub use mint::*;
 pub use states::*;
-declare_id!("77rK3AyovcpMkukLEUfwDp59wfRXkzXomNQGCNmscWeJ");
+pub use buySeat::*; 
+pub use redeem::*;
+declare_id!("EkwZGxeTUfUhHhVATjXt48yus7RQM7qPayBAyGVHJk9d");
 
 #[program]
 pub mod flyswap_program {
 
     use super::*;
 
-   pub fn process_mint_seat(
+   pub fn mint_seat(
         ctx: Context<MintSeat>,
         seat_number: u8,
         reservation_time: i64,
@@ -25,7 +29,7 @@ pub mod flyswap_program {
         name: String,
         uri: String
     ) -> Result<()> {
-        mint_seat( 
+        process_mint_seat( 
             ctx,
             seat_number,
             reservation_time,
@@ -35,4 +39,22 @@ pub mod flyswap_program {
             uri
         )
     }   
+
+
+    pub fn buy_seat(
+        ctx: Context<BuySeat>,
+        amount: u64,
+    ) -> Result<()> {
+        process_buy_seat(ctx, amount)
+    }
+
+
+    pub fn redeem_seat(
+        ctx: Context<RedeemSeat>,
+    ) -> Result<()> {
+        process_redeem_seat(ctx)?;
+        Ok(())
+    }
+
+
 }

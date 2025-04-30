@@ -11,4 +11,6 @@ pub struct Seat {
     pub departure_time: i64,
     pub arrival_time: i64,
     pub is_used: bool,
+    pub checked_in: bool,
+    pub checked_in_time: Option<i64>,
 }

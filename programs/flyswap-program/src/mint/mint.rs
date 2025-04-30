@@ -43,7 +43,7 @@ pub struct MintSeat<'info> {
     pub system_program: Program<'info, System>,
 }
 
-pub fn mint_seat(
+pub fn process_mint_seat(
     ctx: Context<MintSeat>,
     seat_number: u8,
     reservation_time: i64,
