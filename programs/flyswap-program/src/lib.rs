@@ -9,7 +9,7 @@ pub use constant::*;
 pub use error::*;
 pub use mint::*;
 pub use states::*;
-declare_id!("4QTwYBM4fNoS7L8pNuWUFWwmgjPqaJML3BmrHv4kzNSK");
+declare_id!("77rK3AyovcpMkukLEUfwDp59wfRXkzXomNQGCNmscWeJ");
 
 #[program]
 pub mod flyswap_program {
